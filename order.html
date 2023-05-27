@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Responsive bottom navigation</title>
+    <title>LaundryQ App</title>
 </head>
 
 <body>
@@ -57,14 +57,14 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="#skills" class="nav__link">
+                        <a href="riwayat.html" class="nav__link">
                             <i class='bx bx-folder-open nav__icon'></i>
                             <span class="nav__name">Riwayat</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
+                        <a href="about.html" class="nav__link">
                             <i class='bx bx-id-card nav__icon'></i>
                             <span class="nav__name">About</span>
                         </a>
@@ -92,6 +92,16 @@
     <main>
         <!--=============== ABOUT ===============-->
         <section class="container section section__height" id="about">
+            <div class="row">
+                <div class="col-md-6 col-6">
+                    <div id="title">
+                        <h2><b>HALAMAN ORDER</b></h2>
+                        <p>Dashboard / Order</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-6">
+                </div>
+            </div>
             <div class="d-flex justify-content-center">
                 <form class="form col-md-12`">
                     <h4 class="text-center"><b>Order Cucian</b></h4>
@@ -184,24 +194,7 @@
             </div>
         </div>
     </footer>
-
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Menampilkan loading screen saat konten situs web dimuat
-            var loadingScreen = document.getElementById("loading-screen");
-            loadingScreen.style.display = "flex";
-
-            // Menghilangkan loading screen setelah beberapa detik
-            var durationInSeconds = 5; // Ubah angka ini menjadi durasi yang diinginkan (dalam detik)
-            setTimeout(function () {
-                loadingScreen.style.display = "none";
-            }, durationInSeconds * 100); // Mengubah durasi menjadi milidetik
-        });
-
-    </script>
-    <!--=============== MAIN JS ===============-->
+    
     <script src="assets/js/main.js"></script>
 </body>
 

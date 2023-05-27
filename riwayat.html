@@ -43,7 +43,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
+                        <a href="index.html" class="nav__link">
                             <i class='bx bx-home-alt nav__icon'></i>
                             <span class="nav__name">Home</span>
                         </a>
@@ -57,8 +57,8 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="riwayat.html" class="nav__link">
-                            <i class='bx bx-notepad nav__icon'></i>
+                        <a href="#riwayat" class="nav__link active-link">
+                            <i class='bx bx-folder-open nav__icon'></i>
                             <span class="nav__name">Riwayat</span>
                         </a>
                     </li>
@@ -71,7 +71,7 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="#logout" class="nav__link" data-toggle="modal" data-target="#exampleModal">
+                        <a href="#contactme" class="nav__link" data-toggle="modal" data-target="#exampleModal">
                             <i class='bx bx-log-out nav__icon'></i>
                             <span class="nav__name">Logout</span>
                         </a>
@@ -79,7 +79,7 @@
                 </ul>
             </div>
 
-            <img data-name="Wandi" id="initial" alt="" class="profile nav__img" data-toggle="dropdown">
+            <img src="assets/img/perfil.png" alt="" class="nav__img" data-toggle="dropdown">
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="#"> <i class="text-info fa-solid fa-gear"></i> Settings</a>
                 <div class="dropdown-divider"></div>
@@ -90,66 +90,18 @@
     </header>
 
     <main>
-        <!--=============== HOME ===============-->
-        <section class="container section section__height" id="home">
+        <!--=============== ABOUT ===============-->
+        <section class="container section section__height" id="about">
             <div class="row">
                 <div class="col-md-6 col-6">
                     <div id="title">
-                        <h2><b>HALAMAN DASBOARD</b></h2>
-                        <p>Dashboar / home</p>
+                        <h2><b>HALAMAN RIWAYAT</b></h2>
+                        <p>Dashboard / Riwayat</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-6">
-                    <a href="" class="btn btn-primary" id="button-order">Order Sekrang</a>
                 </div>
             </div>
-            <div class="row mt-3">
-                <div class="col-md-4">
-                    <div class="cardd">
-                        <div class="row align-items-center">
-                            <div class="col-sm-6 col-6">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </div>
-                            <div class="col-sm-6 col-6">
-                                <h6><b>CONTOH</b></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="cardd">
-                        <div class="row align-items-center">
-                            <div class="col-sm-6 col-6">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </div>
-                            <div class="col-sm-6 col-6">
-                                <h6><b>CONTOH</b></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="cardd">
-                        <div class="row align-items-center">
-                            <div class="col-sm-6 col-6">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </div>
-                            <div class="col-sm-6 col-6">
-                                <h6><b>CONTOH</b></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--=============== SKILLS ===============-->
-        <section class="container section section__height" id="riwayat">
-            <h2 class="section__title">Riwayat</h2>
-        </section>
-
-        <!--=============== PORTFOLIO ===============-->
-        <section class="container section section__height" id="about">
-            <h2 class="section__title">About</h2>
         </section>
 
         <!-- Modal -->
@@ -210,15 +162,8 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        $(document).ready(function() {
-    		$('.profile').initial();
-		}); 
-    </script> 
+    
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/initial.js"></script>
-    <!-- <script src="assets/js/initial.min.js"></script> -->
 </body>
 
 </html>

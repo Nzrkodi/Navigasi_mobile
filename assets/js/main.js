@@ -26,3 +26,16 @@ function scrollHeader(){
     if(this.scrollY >= 80) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Menampilkan loading screen saat konten situs web dimuat
+    var loadingScreen = document.getElementById("loading-screen");
+    loadingScreen.style.display = "flex";
+  
+    // Menghilangkan loading screen setelah beberapa detik
+    var durationInSeconds = 5; // Ubah angka ini menjadi durasi yang diinginkan (dalam detik)
+    setTimeout(function() {
+      loadingScreen.style.display = "none";
+    }, durationInSeconds * 100); // Mengubah durasi menjadi milidetik
+  });
