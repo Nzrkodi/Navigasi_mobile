@@ -32,10 +32,13 @@
 </head>
 
 <body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
     <!--=============== HEADER ===============-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo" style="margin-left: 10px;"> Laundry App</a>
+            <a href="#" class="nav__logo" style="margin-left: 10px;"> LaundryQ App</a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
@@ -47,28 +50,28 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="#about" class="nav__link">
+                        <a href="#order" class="nav__link">
                             <i class='bx bx-cart-add nav__icon'></i>
                             <span class="nav__name">Order</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class='bx bx-folder-open nav__icon'></i>
+                        <a href="#riwayat" class="nav__link">
+                            <i class='bx bx-notepad nav__icon'></i>
                             <span class="nav__name">Riwayat</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
+                        <a href="#about" class="nav__link">
                             <i class='bx bx-id-card nav__icon'></i>
                             <span class="nav__name">About</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#contactme" class="nav__link" data-toggle="modal" data-target="#exampleModal">
+                        <a href="#logout" class="nav__link" data-toggle="modal" data-target="#exampleModal">
                             <i class='bx bx-log-out nav__icon'></i>
                             <span class="nav__name">Logout</span>
                         </a>
@@ -80,7 +83,8 @@
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="#"> <i class="text-info fa-solid fa-gear"></i> Settings</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="text-danger fa-solid fa-door-closed"></i> Logout</a>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal"><i
+                        class="text-danger fa-solid fa-door-closed"></i> Logout</a>
             </div>
         </nav>
     </header>
@@ -89,131 +93,124 @@
         <!--=============== HOME ===============-->
         <section class="container section section__height" id="home">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-6 col-6">
+                    <div id="title">
+                        <h2><b>DASBOARD</b></h2>
+                        <p>Dashboar / home</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-6">
+                    <a href="" class="btn btn-primary" id="button-order">Order Sekrang</a>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4">
                     <div class="cardd">
                         <div class="row align-items-center">
                             <div class="col-sm-6 col-6">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </div>
                             <div class="col-sm-6 col-6">
-                                <h6><b>STATUS</b></h6>
+                                <h6><b>CONTOH</b></h6>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="cardd">
                         <div class="row align-items-center">
                             <div class="col-sm-6 col-6">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </div>
                             <div class="col-sm-6 col-6">
-                                <h6><b>STATUS</b></h6>
+                                <h6><b>CONTOH</b></h6>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="cardd">
                         <div class="row align-items-center">
                             <div class="col-sm-6 col-6">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </div>
                             <div class="col-sm-6 col-6">
-                                <h6><b>STATUS</b></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="cardd">
-                        <div class="row align-items-center">
-                            <div class="col-sm-6 col-6">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </div>
-                            <div class="col-sm-6 col-6">
-                                <h6><b>STATUS</b></h6>
+                                <h6><b>CONTOH</b></h6>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!--=============== ABOUT ===============-->
-        <section class="container section section__height" id="about">
-            <h2 class="section__title">Order</h2>
-            <div class="d-flex justify-content-center">
-                <form class="form col-md-12`">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Jenis Cucian</label>
-                        <select name="" id="" class="form-control">
-                            <option value="" disabled selected>Pilih Jenis Cucian</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Jenis Paket</label>
-                        <select name="" id="" class="form-control">
-                            <option value="" disabled selected>Pilih Jenis Paket</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Berat/Kg</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="... /Kg">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Harga</label>
-                        <input type="number" class="form-control" id="exampleInputPassword1"
-                            placeholder="Masukan Harga">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Keterangan</label>
-                        <textarea name="" id="" cols="30" rows="7" class="form-control"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary float-right">Submit</button>
-                </form>
-            </div>
-        </section>
-
         <!--=============== SKILLS ===============-->
-        <section class="container section section__height" id="skills">
+        <section class="container section section__height" id="riwayat">
             <h2 class="section__title">Riwayat</h2>
         </section>
 
         <!--=============== PORTFOLIO ===============-->
-        <section class="container section section__height" id="portfolio">
+        <section class="container section section__height" id="about">
             <h2 class="section__title">About</h2>
         </section>
 
-        <!--=============== CONTACTME ===============-->
-        <section class="container section section__height" id="contactme">
-            <h2 class="section__title">Logout</h2>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <h2>Apakah yakin ingin keluar?</h2>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Keluar</button>
-                        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Apakah anda yakin ingin keluar?</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger">Keluar</button>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>About Our Laundry</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nulla eu aliquet fringilla.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Contact Info</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt"></i> Address, City, Country</li>
+                        <li><i class="fas fa-envelope"></i> email@example.com</li>
+                        <li><i class="fas fa-phone"></i> +1234567890</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2023 Your Laundry. All rights reserved.</p>
+                <div class="social-icons mb-4">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-
-    <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
 </body>
 

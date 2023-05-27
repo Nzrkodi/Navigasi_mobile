@@ -3,29 +3,206 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+        integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Document</title>
+
+    <title>Responsive bottom navigation</title>
 </head>
 
 <body>
-    <div class="dropdown show">
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo" style="margin-left: 10px;"> LaundryQ App</a>
 
-        <div class="dropdown">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                Dropdown button
-            </button>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">
+                            <i class='bx bx-home-alt nav__icon'></i>
+                            <span class="nav__name">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="dashboard.html" class="nav__link active-link">
+                            <i class='bx bx-cart-add nav__icon'></i>
+                            <span class="nav__name">Order</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class='bx bx-folder-open nav__icon'></i>
+                            <span class="nav__name">Riwayat</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">
+                            <i class='bx bx-id-card nav__icon'></i>
+                            <span class="nav__name">About</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contactme" class="nav__link" data-toggle="modal" data-target="#exampleModal">
+                            <i class='bx bx-log-out nav__icon'></i>
+                            <span class="nav__name">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <img src="assets/img/perfil.png" alt="" class="nav__img" data-toggle="dropdown">
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Link 1</a>
-                <a class="dropdown-item" href="#">Link 2</a>
-                <a class="dropdown-item" href="#">Link 3</a>
+                <a class="dropdown-item" href="#"> <i class="text-info fa-solid fa-gear"></i> Settings</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Another link</a>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal"><i
+                        class="text-danger fa-solid fa-door-closed"></i> Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!--=============== ABOUT ===============-->
+        <section class="container section section__height" id="about">
+            <div class="d-flex justify-content-center">
+                <form class="form col-md-12`">
+                    <h4 class="text-center"><b>Order Cucian</b></h4>
+                    <hr>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Jenis Cucian</label>
+                        <select name="" id="" class="form-control">
+                            <option value="" disabled selected>Pilih Jenis Cucian</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Jenis Paket</label>
+                        <select name="" id="" class="form-control">
+                            <option value="" disabled selected>Pilih Jenis Paket</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Berat/Kg</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="... /Kg">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Harga</label>
+                        <input type="number" class="form-control" id="exampleInputPassword1"
+                            placeholder="Masukan Harga">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Keterangan</label>
+                        <textarea name="" id="" cols="30" rows="7" class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary float-right">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Apakah anda yakin ingin keluar?</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger">Keluar</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>About Our Laundry</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nulla eu aliquet fringilla.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Contact Info</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt"></i> Address, City, Country</li>
+                        <li><i class="fas fa-envelope"></i> email@example.com</li>
+                        <li><i class="fas fa-phone"></i> +1234567890</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2023 Your Laundry. All rights reserved.</p>
+                <div class="social-icons mb-4">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Menampilkan loading screen saat konten situs web dimuat
+            var loadingScreen = document.getElementById("loading-screen");
+            loadingScreen.style.display = "flex";
+
+            // Menghilangkan loading screen setelah beberapa detik
+            var durationInSeconds = 5; // Ubah angka ini menjadi durasi yang diinginkan (dalam detik)
+            setTimeout(function () {
+                loadingScreen.style.display = "none";
+            }, durationInSeconds * 100); // Mengubah durasi menjadi milidetik
+        });
+
+    </script>
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

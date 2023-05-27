@@ -10,10 +10,10 @@
   --sat: 63%;
   --first-color: darkblue;
   --first-color-alt: darkblue;
-  --title-color: #47B5FF;
+  --title-color: white;
   --text-color: hsl(var(--hue), 8%, 35%);
-  --body-color: f4fdff;
-  --container-color: aliceblue;
+  --body-color: whitesmoke;
+  --container-color: #30A2FF;
   --box-shadow: box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
   /*========== Font and typography ==========*/
@@ -64,6 +64,10 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+main{
+  background-color: aliceblue;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -133,6 +137,20 @@ img {
     align-content: center;
     border-radius: 1rem 1rem 0 0;
     transition: .4s;
+  }
+
+  #button-order{
+    float: right;
+  }
+
+  #title{
+    font-size: 10pt;
+  }
+
+  #title h2{
+    margin-top: 12px;
+    font-size: 15pt;
+    line-height: 1pt;
   }
 }
 
@@ -231,7 +249,6 @@ img {
 
   /* First design, remove if you choose the minimalist design */
   .active-link::before {
-    content: '';
     position: absolute;
     bottom: -.75rem;
     width: 4px;
@@ -240,6 +257,9 @@ img {
     border-radius: 50%;
   }
 
+  #button-order{
+    float: right;
+  }
   /* Minimalist design */
   /* .active-link::before{
       bottom: -.75rem;
@@ -253,3 +273,5 @@ img {
     margin-right: auto;
   }
 }
+
+
